@@ -1,5 +1,6 @@
 <template>
   <div id="HOME">
+    <Header />
     <Todos v-bind:todos="todos" />
     <!-- <Json v-bind:json="json" /> -->
 
@@ -179,11 +180,11 @@
             <b-card-header header-tag="header" id="accord-heading" role="tab">
               <b-button
                 style="
-                text-align: left;
-                background: transparent;
-                border: none;
-                font-size: 22px;
-              "
+                  text-align: left;
+                  background: transparent;
+                  border: none;
+                  font-size: 22px;
+                "
                 variant="light"
                 v-b-toggle="`foo-${data1.id}`"
                 block
@@ -1027,7 +1028,11 @@
           <ul class="iconsocial">
             <li>
               <b-link href="#">
-                <img src="../assets/you.png" style="width:50px" alt="youtube" />
+                <img
+                  src="../assets/you.png"
+                  style="width: 50px"
+                  alt="youtube"
+                />
 
                 <!-- <i class="fa fa-youtube"></i> -->
               </b-link>
@@ -1036,7 +1041,7 @@
               <b-link href="#">
                 <img
                   src="../assets/whatsapp.png"
-                  style="width:40px"
+                  style="width: 40px"
                   alt="what"
                 />
 
@@ -1047,7 +1052,7 @@
               <b-link href="#">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1000px-Telegram_logo.svg.png"
-                  style="width:40px"
+                  style="width: 40px"
                   alt="tele"
                 />
 
@@ -1110,9 +1115,11 @@
         /></a>-->
         <div class="clear">&nbsp;</div>
       </div>
-      <div class="footer-icon">
-        <a href="#"><i class="fa fa-comments-o"></i></a>
-      </div>
+      <!--<div class="footer-icon">
+        <a href="#">
+          <i class="fa fa-comments-o"></i>
+        </a>
+      </div>-->
     </footer>
   </div>
 </template>
@@ -1124,11 +1131,13 @@
 import Todos from "../components/Todos";
 import json from "../assets/proposal.json";
 // import AddTodo from "../components/AddTodo";
+import Header from "../components/layout/header";
 import axios from "axios";
 export default {
   name: "Home",
   components: {
     Todos,
+    Header,
   },
   data() {
     return {
@@ -1151,7 +1160,7 @@ export default {
       console.log("hello");
       this.$router.push({ path: "/thankyou" });
     },
-    activate: function(el) {
+    activate: function (el) {
       console.log("el", el);
       this.active_el = el;
     },
@@ -1174,6 +1183,18 @@ export default {
       .catch((err) => console.log(err));
   },
 };
+
+var Tawk_API = Tawk_API || {},
+  Tawk_LoadStart = new Date();
+(function () {
+  var s1 = document.createElement("script"),
+    s0 = document.getElementsByTagName("script")[0];
+  s1.async = true;
+  s1.src = "https://embed.tawk.to/564f634590d1bced690e0633/default";
+  s1.charset = "UTF-8";
+  s1.setAttribute("crossorigin", "*");
+  s0.parentNode.insertBefore(s1, s0);
+})();
 </script>
 
 <style>
@@ -1261,7 +1282,7 @@ body {
 .footer-icon a:hover {
   opacity: 0.9;
   color: #ccc;
-} 
+}
 div#accordion-1 .text {
   padding: 15px !important;
 }
@@ -1305,6 +1326,10 @@ ul.iconsocial li {
   display: inline-block;
   list-style: none;
   padding: 5px;
+}
+.logo img {
+  width: 150px;
+  border-radius: 5px;
 }
 
 /* ul.iconsocial li a {
@@ -1428,6 +1453,18 @@ h1.navbar-brand.mb-0 {
     left: 0px !important;
     right: 0px !important;
     bottom: 0px !important;
+  }
+  .persoal-cc h3 {
+    width: 75% !important;
+    font-size: 18px !important;
+  }
+
+  .persoal-cc h2 {
+    font-size: 14px !important;
+  }
+
+  .tabsbv ul li {
+    font-size: 16px !important;
   }
   h1.navbar-brand.mb-0 {
     margin: auto !important;

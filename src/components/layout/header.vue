@@ -5,9 +5,7 @@
       <b-navbar variant="faded" type="light">
         <b-navbar-brand tag="h1" class="mb-0">
           <div class="logo">
-            <img
-              src="https://borgobrufaspa.re-guest.com/Media/ImageShrink/be4266b0-9ffb-49f2-b878-b2dcf1098913/200/200"
-            />
+            <img src="./../../assets/logo_global.png" />
           </div>
         </b-navbar-brand>
       </b-navbar>
@@ -16,12 +14,12 @@
 </template>
 <script>
 export default {
-  name: "header",
+  name: "header"
 };
 </script>
 <style scoped>
-.logo {
-}
+/* .logo {
+} */
 /* .header {
   background: #333;
   color: #fff;
