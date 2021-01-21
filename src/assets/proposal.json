@@ -1,0 +1,71 @@
+{
+  "guidclientehr": "470C868C-EE45-4544-A14F-8978A2A7A44B",
+  "nominativo": "te",
+  "guidstrutturahr": "74DC6801-2DE1-4F30-9341-DD6310B5D6DD",
+  "galleria_generale": [
+    {
+      "id": "50A93BF5-13EA-44BC-AE2F-37CDE555EC26",
+      "src": "https://www.hotelbernard.it/wp-content/uploads/sites/33/HBesterno.jpg",
+      "descrizione": "Hotel Esterno"
+    },
+    {
+      "descrizione": "Hotel Reception",
+      "src": "https://www.ahstatic.com/photos/9399_ho_00_p_1024x768.jpg",
+      "id": "ADF6D92D-BF06-474B-8AE2-85A533310319"
+    }
+  ],
+  "id": "277B4311-9922-450A-87CC-57A5447D5AB4",
+  "soluzioni": [
+    {
+      "occupancy": "Adulti: 2",
+      "prezzo": "33000",
+      "galleria": [
+        {
+          "descrizione": "Suite 3",
+          "id": "7AF95CFB-4EE8-4F9D-9D71-41CF4366173D",
+          "src": "https://www.hotelbernard.it/wp-content/uploads/sites/33/HB_suite1-71.jpg"
+        },
+        {
+          "id": "C235C15C-A64C-4E6B-9C46-600F42351E3D",
+          "descrizione": "Suite 1",
+          "src": "https://www.hotelbernard.it/wp-content/uploads/sites/33/suite2.jpg"
+        },
+        {
+          "descrizione": "Suite2",
+          "src": "https://www.hotelbernard.it/wp-content/uploads/sites/33/HB_suite1-63bis_mod.jpg",
+          "id": "F120B260-28EA-494F-9688-1F5947FCB7E2"
+        }
+      ],
+      "tipologie": "DELUXE",
+      "descrizione": "DELUXE",
+      "trattamento": "Bed & Breakfast",
+      "id": "1",
+      "img": "https://www.hotelbernard.it/wp-content/uploads/sites/33/HB_suite1-75-2.jpg",
+      "al": "31-12-2020",
+      "dal": "30-12-2020",
+      "descrizione_estesa": null,
+      "risorse": [
+        {
+          "DescrizioneTipologia": "SUITE",
+          "prezzi": [
+            {
+              "descrizione": "SUITE - BB dal 30/12/2020 al 31/12/2020",
+              "importo": "25000",
+              "importostd": "25000"
+            },
+            {
+              "importo": "4000",
+              "descrizione": "Adulto - BB dal 30/12/2020 al 31/12/2020",
+              "importostd": "4000"
+            },
+            {
+              "importo": "4000",
+              "descrizione": "Adulto - BB dal 30/12/2020 al 31/12/2020",
+              "importostd": "4000"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

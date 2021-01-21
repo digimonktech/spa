@@ -1,0 +1,164 @@
+
+{
+  "nominativo": "test",
+  "galleria_generale": [
+    {
+      "id": "50A93BF5-13EA-44BC-AE2F-37CDE555EC26",
+      "src": "https://www.hotelbernard.it/wp-content/uploads/sites/33/HBesterno.jpg",
+      "descrizione": "Hotel Esterno"
+    },
+    {
+      "src": "https://www.ahstatic.com/photos/9399_ho_00_p_1024x768.jpg",
+      "id": "ADF6D92D-BF06-474B-8AE2-85A533310319",
+      "descrizione": "Hotel Reception"
+    }
+  ],
+  "info": [
+    {
+      "id": "B8849114-EC31-45F0-B0BD-3AED6EB8E6DF",
+      "titolo": "Benvenuto",
+      "testo": "Ti diamo il <b>BENVENUTO </b>nel nostro Hotel"
+    },
+    {
+      "titolo": "Saluto",
+      "testo": "La vostra <b><u>soddisfazione </u></b>è il nostro <u><b>lavoro</b></u>",
+      "id": "8C8D7CB8-FF82-45BF-97F5-A54BF0F85048"
+    },
+    {
+      "titolo": "Condizioni Generali",
+      "id": "ADF50107-CF72-4BB5-B950-A9AFEA8EFD06",
+      "testo": "<strong style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(99, 36, 35);\">Tassa di soggiorno:</span></strong><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(38, 38, 38);\"><br></span><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(89, 89, 89);\">Nessuna tassa di soggiorno richiesta<br><br><strong><span style=\"color: rgb(99, 36, 35);\">Adults only hotel:<br></span></strong>Per far vivere una vacanza nel silenzio e nella tranquillità Borgobrufa SPA Resort accoglie esclusivamente ospiti di età superiore ai 15 anni.</span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><strong style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(99, 36, 35);\">Arrivi e partenze:</span></strong><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(89, 89, 89);\">Check-in centro benessere: dalle ore 13,00<br>Check-in camera: dalle ore 15,30<br>Check-out camera &amp; centro benessere: entro le ore 12,00<br></span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(99, 36, 35);\"><strong>Late check-out:</strong></span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(89, 89, 89);\">La struttura prevede 2 modalità di late check-out.<br>- utilizzare camera e SPA oltre le ore 12,00 del giorno di partenza. Al costo di Euro 60,00 a persona è possibile utilizzare la camera ed accedere al centro benessere fino alle ore 19,30 [soluzione non valida per soggiorni in Imperial Suite].<br>- utilizzare solo il centro benessere oltre le ore 12,00. Al costo di Euro 40,00 a persona è possibile continuare a fruire dei servizi SPA fino alle ore 19,30, liberando la camera entro le ore 12,00.<br></span><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(89, 89, 89);\">Tutti i late check-out vanno concessi dalla reception dell'hotel solo su disponibilità.</span><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(255, 255, 255);\"><span style=\"color: rgb(63, 63, 63);\"><br></span><br></span><strong style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(99, 36, 35);\">Modalità di conferma:</span></strong><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(89, 89, 89);\">La prenotazione del soggiorno viene considerata definitiva dopo un anticipo pari al 30% del totale del soggiorno.</span><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(89, 89, 89);\">&nbsp;In caso di promozioni non rimborsabili la prenotazione viene considerata definitiva a fronte del pagamento dell'importo totale del soggiorno.</span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><strong style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(99, 36, 35);\">Disdetta:</span></strong><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(240, 239, 237);\">Annullamenti o disdette devono essere comunicati tempestivamente contattando la reception dell'hotel al numero 075/9883 e inviando un’e-mail all’indirizzo&nbsp;</span><strong style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(99, 36, 35);\"><a href=\"mailto:booking@borgobrufa.it\" style=\"cursor: pointer; transition: opacity 500ms ease 0s; color: rgb(142, 130, 121);\">booking@borgobrufa.it</a>.</span></strong><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(240, 239, 237);\">Se la disdetta avviene entro 5 giorni dalla data di arrivo, la quota versata verrà restituita per intero.</span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(240, 239, 237);\">Da 4 a 0 giorni che precedono l'arrivo la quota non verrà restituita.</span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(240, 239, 237);\">In caso di promozioni non rimborsabili la quota versata non verrà restituita.</span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(240, 239, 237);\">In caso di partenza anticipata verrà applicata una penale del 30% per ciascuna notte annullata sulla tariffa da listino.</span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(99, 36, 35);\"><strong>Amici a quattro zampe:</strong></span><strong style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"></strong><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(240, 239, 237);\">Con preavviso accettiamo cani di piccola taglia (fino a 15 Kg.), con un contributo di 15,00 € al giorno.</span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(240, 239, 237);\">Vi saremo grati se porterete con Voi una coperta e il cestino per il Vostro cane.</span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(240, 239, 237);\">Gli animali dovranno essere mostrati all'arrivo. Vi preghiamo di comprendere che gli amici a quattro zampe non hanno accesso alle zone comuni dell'hotel, nell’area delle nostre piscine, all’interno della nostra SPA e del ristorante.</span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(240, 239, 237);\">AVVERTENZE AI SENSI DEL DLGS 196/2003</span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(240, 239, 237);\">Le informazioni contenute in questa lettera e/o nel/i file/s allegato/i, sono da considerarsi strettamente riservate. Il loro utilizzo è consentito esclusivamente al destinatario del messaggio, per le finalità indicate nel messaggio stesso. Qualora riceveste questo messaggio senza esserne il destinatario, Vi preghiamo cortesemente di darcene notizia via e-mail e di procedere alla distruzione del messaggio stesso, cancellandolo dal Vostro sistema; costituisce comportamento contrario ai principi dettati dal Dlgs. 196/2003 il trattenere il messaggio stesso, divulgarlo anche in parte, distribuirlo ad altri soggetti, copiarlo, od utilizzarlo per finalità diverse.</span>"
+    },
+    {
+      "id": "956C905F-AD10-4F78-A204-F176C47EC8AE",
+      "titolo": "Informazioni Importanti",
+      "testo": "<strong style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><img src=\"https://borgobrufaspa.re-guest.com/media/image/745c9f6d-54f9-4202-bc29-5a532c182a57?maxWidth=320\" alt=\"117 Borgobrufa Spa Relax\" class=\"medium\" style=\"border: 0px; vertical-align: middle; position: relative; z-index: 1; max-width: 100%; height: auto !important;\"><img src=\"https://borgobrufaspa.re-guest.com/media/image/0dbd5386-63da-4d03-b8bc-658fc03858f3?maxWidth=320\" alt=\"99 Borgobrufa Spa Piscina Serale\" class=\"medium\" style=\"border: 0px; vertical-align: middle; position: relative; z-index: 1; max-width: 100%; height: auto !important; float: right; margin: 0px 0px 10px 10px;\"><br><br><span style=\"color: rgb(99, 36, 35);\">Cos’è il Mondo delle Acque?</span></strong><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(89, 89, 89);\">Uno spazio denominato “Arc-en-ciel”, dedicato all’acqua e dotato di numerose zone relax. Avrete a disposizione una bellissima piscina panoramica riscaldata e collegata con una piscina interna per una grandezza complessiva di 300mq (Le piscine offrono postazioni rilassamento, panche e botti idromassaggio, nuoto controcorrente, lama d’acqua per la cervicale, getti relax e idromassaggi per schiena e gambe), una piscina estiva aperta da Giugno a Settembre con ampio solarium e bar estivo.<br>Apertura dalle 9,00 alle 19,30 di ogni giorno.</span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><strong style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><br><span style=\"color: rgb(99, 36, 35);\">Cos’è il Mondo delle Saune?<br></span></strong><img src=\"https://borgobrufaspa.re-guest.com/media/image/9d1f71ed-6fdb-4bbb-a563-a04ca421e56a?maxWidth=320\" alt=\"34 Borgobrufa Spa Sauna\" class=\"medium\" style=\"border: 0px; vertical-align: middle; position: relative; z-index: 1; max-width: 100%; color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; height: auto !important;\"><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(89, 89, 89);\">Denominato “Tempio delle voci”, un sinuoso percorso alla scoperta del benessere totale con vitarium, sauna finlandese, fontana di ghiaccio, cristalli di neve, sauna panoramica, bagno di vapore, docce emozionali, stanza del riposo, area relax sensoriale, area relax panoramica e la particolarissima stanza delle stelle.<br>La nostra SPA è ispirata alla tradizione nordica, quindi non è previsto l’uso del costume che ad alte temperature può rilasciare sostanze tossiche.<br>Apertura dalle 10,00 alle 19,30 di ogni giorno.<br>Kit benessere: accappatoio, telo e ciabattine ad uso gratuito.<br><br>Ricordiamo che all'interno della SPA, nel rispetto del comfort e della privacy dei nostri ospiti, non è consentito l'uso di apparecchi fotografici e telefonini.<br></span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(166, 81, 57);\"><strong><br></strong><strong><span style=\"color: rgb(99, 36, 35);\">Trattamenti e massaggi:</span></strong></span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(240, 239, 237);\">Per consultare i trattamenti/massaggi disponibili le consigliamo di scaricare la BROCHURE SPA&nbsp;</span><a href=\"http://www.borgobrufa.it/it/benessere/itrattamenti/108-0.html\" target=\"_blank\" style=\"cursor: pointer; transition: opacity 500ms ease 0s; color: rgb(142, 130, 121); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(99, 36, 35);\"><strong>“Armonia, Essenza &amp; Bellezza”.</strong></span></a><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(89, 89, 89);\">Tali servizi vanno<strong><span style=\"color: rgb(0, 0, 0);\">&nbsp;</span>prenotati prima dell’arrivo<span style=\"color: rgb(0, 0, 0);\">&nbsp;</span></strong>in struttura presso la Reception della Spa chiamando il numero</span><strong style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(0, 0, 0);\">&nbsp;</span><span style=\"color: rgb(99, 36, 35);\">075/9883220</span></strong><span style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; background-color: rgb(240, 239, 237);\">&nbsp;o scrivendo all'indirizzo</span><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(99, 36, 35);\">&nbsp;</span><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(99, 36, 35);\"><a href=\"mailto:benessere@borgobrufa.it\" style=\"cursor: pointer; transition: opacity 500ms ease 0s; color: rgb(142, 130, 121);\">benessere@borgobrufa.it</a>.</span><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><strong style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><span style=\"color: rgb(99, 36, 35);\">Dress code per il ristorante:</span></strong><br style=\"color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><ul style=\"margin: 0px; padding-left: 26px; padding-right: 8px; list-style-type: none; color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px;\"><li style=\"position: relative; left: 8px; text-indent: -8px;\"><span style=\"color: rgb(89, 89, 89);\">È possibile recarsi presso il ristorante per la colazione ed il pranzo in accappatoio.</span></li><li style=\"position: relative; left: 8px; text-indent: -8px;\"><span style=\"color: rgb(89, 89, 89);\">L’abbigliamento richiesto per la cena è casual elegante. Agli uomini è richiesto di vestire con pantaloni lunghi. Non sono consentite ciabatte e/o infradito.</span></li></ul><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(192, 80, 77);\"><strong><span style=\"color: rgb(99, 36, 35);\">Adults only hotel:&nbsp;</span></strong></span><span style=\"font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; color: rgb(89, 89, 89);\">Per far vivere una vacanza nel silenzio e nella tranquillità Borgobrufa accoglie esclusivamente ospiti di età superiore ai 15 anni<br><br></span><img src=\"https://borgobrufaspa.re-guest.com/media/image/a8e6e099-6226-4bea-ada3-5f9ced573fc7?maxWidth=320\" alt=\"27 Borgobrufa Spa Relax\" class=\"medium\" style=\"border: 0px; vertical-align: middle; position: relative; z-index: 1; max-width: 100%; color: rgb(51, 51, 51); font-family: &quot;Gill Sans Light&quot;, sans-serif; font-size: 16px; height: auto !important;\">"
+    }
+  ],
+  "guidclientehr": "470C868C-EE45-4544-A14F-8978A2A7A44B",
+  "soluzioni": [
+    {
+      "galleria": [
+        {
+          "id": "173C7DB3-296A-4467-903C-AB7702192BFD",
+          "descrizione": "Superior 1",
+          "src": "https://www.hotelbernard.it/wp-content/uploads/sites/33/HB_superior_1-4_mod.jpg"
+        },
+        {
+          "src": "https://www.hotelbernard.it/wp-content/uploads/sites/33/HB_superior_part2-res.jpg",
+          "descrizione": "Superior 2",
+          "id": "D521A7CA-B2EF-4834-9D19-5BA56FC22FD5"
+        }
+      ],
+      "al": "08-12-2020",
+      "tipologie": "Doppia | Singola",
+      "descrizione": "Doppia | Singola",
+      "descrizione_estesa": null,
+      "dal": "07-12-2020",
+      "trattamento": "Bed & Breakfast",
+      "prezzo": "16000",
+      "img": null,
+      "risorse": [
+        {
+          "Note": null,
+          "Allestimento": null,
+          "prezzi": [
+            {
+              "importo": "0",
+              "importostd": "0",
+              "descrizione": "MAT SUP - BB dal 07/12/2020 al 08/12/2020"
+            },
+            {
+              "importostd": "4000",
+              "importo": "4000",
+              "descrizione": "Adulto - BB dal 07/12/2020 al 08/12/2020"
+            },
+            {
+              "importostd": "4000",
+              "descrizione": "Adulto - BB dal 07/12/2020 al 08/12/2020",
+              "importo": "4000"
+            }
+          ],
+          "TotaleRisorsa": "8000",
+          "galleria": [
+            {
+              "descrizione": "Superior 1",
+              "src": "https://www.hotelbernard.it/wp-content/uploads/sites/33/HB_superior_1-4_mod.jpg",
+              "id": "173C7DB3-296A-4467-903C-AB7702192BFD"
+            },
+            {
+              "descrizione": "Superior 2",
+              "id": "D521A7CA-B2EF-4834-9D19-5BA56FC22FD5",
+              "src": "https://www.hotelbernard.it/wp-content/uploads/sites/33/HB_superior_part2-res.jpg"
+            }
+          ],
+          "Dal": "07-12-2020",
+          "IdProdotto": "1",
+          "NoteSala": null,
+          "Trattamento": {
+            "Id": "128",
+            "IdGestionale": "BB",
+            "Tipo": "BeB",
+            "Descrizione": "Bed & Breakfast"
+          },
+          "info": [
+            {
+              "testo": "<div class=\"text\" style=\"box-sizing: border-box; position: relative; padding: 30px 200px 0px; color: rgb(33, 37, 41); font-family: Lato, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); outline: none !important;\"><p style=\"box-sizing: border-box; margin: 0px; line-height: 22.4px; font-size: 16px; outline: none !important;\">Camera di 23 mq situata al 5° piano, può ospitare da 2 a 3 persone. Dispone di un letto matrimoniale, un bagno con servizi privati e box doccia. Possibilità di aggiungere un letto singolo.</p><p style=\"box-sizing: border-box; margin: 0px; line-height: 22.4px; font-size: 16px; outline: none !important;\">L’ampio terrazzo di 35 mq con vista mare o collina è dotato di comodi lettini.</p></div><div class=\"rooms-feats mt-3\" style=\"box-sizing: border-box; padding: 0px 200px; color: rgb(33, 37, 41); font-family: Lato, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); outline: none !important; margin-top: 1rem !important;\"><h6 class=\"color-palette1-text\" style=\"box-sizing: border-box; margin: 0px 0px 5px; font-family: inherit; line-height: 24px; color: rgb(157, 150, 141); font-size: 24px; outline: none !important;\">Servizi inclusi</h6><ul style=\"box-sizing: border-box; outline: none !important; margin: 0px; padding: 0px 0px 0px 30px;\"><li style=\"box-sizing: border-box; font-family: inherit; color: inherit; font-size: 16px; line-height: 22.4px; width: 290.875px; float: left; outline: none !important;\">Materasso Simmons</li><li style=\"box-sizing: border-box; font-family: inherit; color: inherit; font-size: 16px; line-height: 22.4px; width: 290.875px; float: left; outline: none !important;\">Menù cuscini per un miglior sonno</li><li style=\"box-sizing: border-box; font-family: inherit; color: inherit; font-size: 16px; line-height: 22.4px; width: 290.875px; float: left; outline: none !important;\">Aria Condizionata</li><li style=\"box-sizing: border-box; font-family: inherit; color: inherit; font-size: 16px; line-height: 22.4px; width: 290.875px; float: left; outline: none !important;\">TV LCD</li><li style=\"box-sizing: border-box; font-family: inherit; color: inherit; font-size: 16px; line-height: 22.4px; width: 290.875px; float: left; outline: none !important;\">Wi-Fi</li><li style=\"box-sizing: border-box; font-family: inherit; color: inherit; font-size: 16px; line-height: 22.4px; width: 290.875px; float: left; outline: none !important;\">Phon</li><li style=\"box-sizing: border-box; font-family: inherit; color: inherit; font-size: 16px; line-height: 22.4px; width: 290.875px; float: left; outline: none !important;\">Minifrigo</li><li style=\"box-sizing: border-box; font-family: inherit; color: inherit; font-size: 16px; line-height: 22.4px; width: 290.875px; float: left; outline: none !important;\">Cassetta di sicurezza</li><li style=\"box-sizing: border-box; font-family: inherit; color: inherit; font-size: 16px; line-height: 22.4px; width: 290.875px; float: left; outline: none !important;\">Set di cortesia esclusivo</li></ul></div>",
+              "id": "EE7A2EC9-227E-4EAB-A79D-D6EE6DFFF572",
+              "titolo": "Descrizione Superior"
+            }
+          ],
+          "DescrizioneTipologia": "MAT SUP",
+          "Al": "08-12-2020",
+          "RisorsaBloccata": "",
+          "IdRisorsa": "1339",
+          "IdGestionaleProdotto": "12345",
+          "CapoRisorsa": "test"
+        },
+        {
+          "TotaleRisorsa": "8000",
+          "RisorsaBloccata": "",
+          "Trattamento": {
+            "IdGestionale": "BB",
+            "Id": "128",
+            "Descrizione": "Bed & Breakfast",
+            "Tipo": "BeB"
+          },
+          "CapoRisorsa": "test",
+          "IdRisorsa": "1332",
+          "info": [],
+          "Note": null,
+          "galleria": [],
+          "NoteSala": null,
+          "IdProdotto": "58",
+          "Allestimento": null,
+          "DescrizioneTipologia": "SING",
+          "IdGestionaleProdotto": "405256",
+          "prezzi": [
+            {
+              "descrizione": "SING - BB dal 07/12/2020 al 08/12/2020",
+              "importostd": "0",
+              "importo": "0"
+            },
+            {
+              "descrizione": "Adulto - BB dal 07/12/2020 al 08/12/2020",
+              "importostd": "4000",
+              "importo": "4000"
+            },
+            {
+              "importo": "4000",
+              "descrizione": "Adulto - BB dal 07/12/2020 al 08/12/2020",
+              "importostd": "4000"
+            }
+          ],
+          "Al": "08-12-2020",
+          "Dal": "07-12-2020"
+        }
+      ],
+      "id": "1",
+      "occupancy": "Adulti: 4"
+    }
+  ],
+  "guidstrutturahr": "74DC6801-2DE1-4F30-9341-DD6310B5D6DD",
+  "id": "86CEEBD2-4A66-4B73-91DD-887D68BEAE1D"
+}
