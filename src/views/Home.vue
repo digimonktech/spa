@@ -31,13 +31,8 @@
       <b-jumbotron id="back-color">
         <div class="paddingbox">
           <div class="row">
-            <div
-              class="col-sm-6"
-              style="padding-top: 47px; color: grey; text-align: justify"
-            >
-              <p class="styles" style="line-height: 0px">
-                Gentile Signor Buttafoco,
-              </p>
+            <div class="col-sm-6" style="padding-top: 47px; color: grey; text-align: justify">
+              <p class="styles" style="line-height: 0px">Gentile Signor Buttafoco,</p>
               <p class="styles">
                 ringraziandola per la Sua gradita richiesta di informazioni
                 siamo ad inviarle il dettaglio della nostra offerta nelle date
@@ -45,9 +40,7 @@
                 il preventivo in Imperial Suite in quanto la Luxury Love Suite
                 risulta già prenotata per la data da lei richiesta.
               </p>
-              <p class="styles" style="line-height: 0px">
-                Cosa ne pensa della nostra proposta?
-              </p>
+              <p class="styles" style="line-height: 0px">Cosa ne pensa della nostra proposta?</p>
               <p class="styles">Desidera prenotare il soggiorno?</p>
               <p class="styles">
                 Al momento non le stiamo opzionando la Suite. La informiamo che
@@ -58,7 +51,8 @@
               <p class="styles">
                 Sperando di aver fatto cosa gradita rimaniamo a disposizione e
                 porgiamo
-                <br />Cordiali saluti, <br />Alvaro Angeli
+                <br />Cordiali saluti,
+                <br />Alvaro Angeli
               </p>
             </div>
             <div class="col-sm-6">
@@ -99,27 +93,21 @@
               </div>
               <div class="perposal-text">
                 <div class="text-left">
-                  <h3 class="font-weight-light subtitle-2">
-                    ARRIVO / PARTENZA
-                  </h3>
+                  <h3 class="font-weight-light subtitle-2">ARRIVO / PARTENZA</h3>
                   <h4>
                     {{ data1.dal }} fino a
                     {{ data1.al }}
                   </h4>
                   <h3 class="font-weight-light subtitle-2">CATEGORIA CAMERA</h3>
                   <h4>{{ data1.tipologie }}</h4>
-                  <h3 class="font-weight-light subtitle-2">
-                    PERSONE / TRATTAMENTO
-                  </h3>
+                  <h3 class="font-weight-light subtitle-2">PERSONE / TRATTAMENTO</h3>
                   <h4>
                     {{ data1.occupancy }} /
                     {{ data1.trattamento }}
                   </h4>
                   <div
                     class="text-uppercase headline font-weight-bold text-right sizebox"
-                  >
-                    € {{ data1.prezzo }}
-                  </div>
+                  >€ {{ data1.prezzo }}</div>
 
                   <div
                     class="align-items-center d-flex font-weight-bold headline justify-content-between mt-4 text-uppercase"
@@ -133,15 +121,13 @@
                       "
                       :class="{ active: active_el == data1.id }"
                       v-on:click="show = `foo-${data1.id}`"
-                      >Details</b-link
-                    >
+                    >Details</b-link>
                     <b-link
                       href="#"
                       class="btn btn-lg btn-outline-warning"
                       @click="gotonextpage()"
                       :key="gotonextpage"
-                      >Confirm</b-link
-                    >
+                    >Confirm</b-link>
                   </div>
                 </div>
               </div>
@@ -154,15 +140,15 @@
     <div class="tabsbv mt-5">
       <b-container>
         <ul>
+          <!-- @click="activate(data1.id)"
+          :class="{ border_new: active_el == data1.id }"-->
           <li
             v-for="data1 in proposal.soluzioni"
             :key="data1"
-            @click="selected = `${data1.id}`"
+            @click="selected = `${data1.id}`,activate(data1.id)"
             :class="{ active: selected === `${data1.id}` }"
             v-on:click="show = `foo-${data1.id}`"
-          >
-            proposal {{ data1.id }}
-          </li>
+          >proposal {{ data1.id }}</li>
           <!-- <li
             @click="selected = 2"
             :class="{ active: selected === 2 }"
@@ -171,20 +157,16 @@
             proposal 2
           </li>-->
         </ul>
-        <div
-          class="proposal-new-box"
-          v-for="data1 in proposal.soluzioni"
-          :key="data1"
-        >
+        <div class="proposal-new-box" v-for="data1 in proposal.soluzioni" :key="data1">
           <b-card no-body class="mb-1">
             <b-card-header header-tag="header" id="accord-heading" role="tab">
               <b-button
                 style="
-                  text-align: left;
-                  background: transparent;
-                  border: none;
-                  font-size: 22px;
-                "
+                text-align: left;
+                background: transparent;
+                border: none;
+                font-size: 22px;
+              "
                 variant="light"
                 v-b-toggle="`foo-${data1.id}`"
                 block
@@ -193,12 +175,7 @@
                 <i class="fa fa-angle-down right-icon" aria-hidden="true"></i>
               </b-button>
             </b-card-header>
-            <b-collapse
-              :id="`foo-${data1.id}`"
-              accordian="acc1"
-              visible
-              role="tabpanel"
-            >
+            <b-collapse :id="`foo-${data1.id}`" accordian="acc1" visible role="tabpanel">
               <b-card-body v-if="show == `foo-${data1.id}`">
                 <div>
                   <div class="persoal-cc">
@@ -258,9 +235,7 @@
                               Per 2 persone, Da Sab 12 Dic a Sab 19 dic (7
                               Notti)
                             </p>
-                            <b-button variant="outline-success"
-                              >Da Parte Dell'operatore:-10%</b-button
-                            >
+                            <b-button variant="outline-success">Da Parte Dell'operatore:-10%</b-button>
                           </div>
                         </b-col>
 
@@ -288,14 +263,8 @@
                     <b-collapse id="collapse-de" class="mt-2">
                       <div class="destailsdd">
                         <div class="row border-box">
-                          <div class="text-left body-1 font-weight-bold col">
-                            Descrizione
-                          </div>
-                          <div
-                            class="text-right text-uppercase body-1 font-weight-bold col"
-                          >
-                            PREZZO
-                          </div>
+                          <div class="text-left body-1 font-weight-bold col">Descrizione</div>
+                          <div class="text-right text-uppercase body-1 font-weight-bold col">PREZZO</div>
                         </div>
                         <div
                           class="row border-box"
@@ -307,9 +276,7 @@
                             <!-- SUITE - BB from 12/30/2020 to 12/31/2020 -->
                             <div></div>
                           </div>
-                          <div class="text-right text-uppercase body-1 col">
-                            € {{ prezzi.importo }}
-                          </div>
+                          <div class="text-right text-uppercase body-1 col">€ {{ prezzi.importo }}</div>
                         </div>
                       </div>
                     </b-collapse>
@@ -334,9 +301,7 @@
                             N.7 aria condizionata
                             <div></div>
                           </div>
-                          <div class="text-right text-uppercase body-1 col">
-                            Incluso
-                          </div>
+                          <div class="text-right text-uppercase body-1 col">Incluso</div>
                         </div>
 
                         <div class="row border-box">
@@ -357,16 +322,10 @@
                       </div>
                     </b-collapse>
                     <div class="row mt-3">
-                      <div
-                        class="text-left headline font-weight-light col font-32"
-                      >
-                        Total price
-                      </div>
+                      <div class="text-left headline font-weight-light col font-32">Total price</div>
                       <div
                         class="text-right text-uppercase headline font-weight-bold col font-32"
-                      >
-                        € {{ data1.prezzo }}
-                      </div>
+                      >€ {{ data1.prezzo }}</div>
                     </div>
                   </div>
                 </div>
@@ -394,19 +353,13 @@
                           style="text-shadow: 1px 1px 2px #333"
                         >
                           <!-- Text slides with image -->
-                          <b-carousel-slide
-                            img-src="https://picsum.photos/1024/480/?image=52"
-                          ></b-carousel-slide>
+                          <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=52"></b-carousel-slide>
 
                           <!-- Slides with custom text -->
-                          <b-carousel-slide
-                            img-src="https://picsum.photos/1024/480/?image=54"
-                          ></b-carousel-slide>
+                          <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54"></b-carousel-slide>
 
                           <!-- Slides with image only -->
-                          <b-carousel-slide
-                            img-src="https://picsum.photos/1024/480/?image=58"
-                          ></b-carousel-slide>
+                          <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
 
                           <!-- Slides with img slot -->
                           <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
@@ -458,9 +411,7 @@
                                 Per 2 persone, Da Sab 12 Dic a Sab 19 dic (7
                                 Notti)
                               </p>
-                              <b-button variant="outline-success"
-                                >Da Parte Dell'operatore:-10%</b-button
-                              >
+                              <b-button variant="outline-success">Da Parte Dell'operatore:-10%</b-button>
                             </div>
                           </b-col>
 
@@ -488,14 +439,10 @@
                       <b-collapse id="collapse-c" visible class="mt-2">
                         <div class="destailsdd">
                           <div class="row border-box">
-                            <div class="text-left body-1 font-weight-bold col">
-                              Descrizione
-                            </div>
+                            <div class="text-left body-1 font-weight-bold col">Descrizione</div>
                             <div
                               class="text-right text-uppercase body-1 font-weight-bold col"
-                            >
-                              PREZZO
-                            </div>
+                            >PREZZO</div>
                           </div>
                           <div
                             class="row border-box"
@@ -507,9 +454,7 @@
                               <!-- SUITE - BB from 12/30/2020 to 12/31/2020 -->
                               <div></div>
                             </div>
-                            <div class="text-right text-uppercase body-1 col">
-                              € {{ prezzi.importo }}
-                            </div>
+                            <div class="text-right text-uppercase body-1 col">€ {{ prezzi.importo }}</div>
                           </div>
                         </div>
                       </b-collapse>
@@ -533,9 +478,7 @@
                               N.7 aria condizionata
                               <div></div>
                             </div>
-                            <div class="text-right text-uppercase body-1 col">
-                              Incluso
-                            </div>
+                            <div class="text-right text-uppercase body-1 col">Incluso</div>
                           </div>
 
                           <div class="row border-box">
@@ -556,16 +499,10 @@
                         </div>
                       </b-collapse>
                       <div class="row mt-3">
-                        <div
-                          class="text-left headline font-weight-light col font-32"
-                        >
-                          Total price
-                        </div>
+                        <div class="text-left headline font-weight-light col font-32">Total price</div>
                         <div
                           class="text-right text-uppercase headline font-weight-bold col font-32"
-                        >
-                          € {{ data1.prezzo }}
-                        </div>
+                        >€ {{ data1.prezzo }}</div>
                       </div>
                     </div>
                   </b-card-text>
@@ -577,11 +514,7 @@
       </b-container>
     </div>
 
-    <div
-      class="container"
-      v-bind:key="data + Math.random()"
-      v-for="data of todos.soluzioni"
-    >
+    <div class="container" v-bind:key="data + Math.random()" v-for="data of todos.soluzioni">
       <!-- <p style="text-align: right; margin-right: 2%">
         dal {{ data.dal }} al {{ data.al }} per {{ data.occupancy }}
         {{ data.risorse[0].Trattamento.Descrizione }}
@@ -607,10 +540,7 @@
           </b-card-header>
           <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
             <b-card-body>
-              <p
-                v-html="data.risorse[0].info[0].testo"
-                style="text-align: left"
-              ></p>
+              <p v-html="data.risorse[0].info[0].testo" style="text-align: left"></p>
 
               <div id="carusel-22">
                 <b-carousel
@@ -672,9 +602,7 @@
             <!-- <template #header>BootstrapVue</template> -->
 
             <table class="table">
-              <th style="width: 79%; border-right: 1px solid #ccc">
-                Descrizione
-              </th>
+              <th style="width: 79%; border-right: 1px solid #ccc">Descrizione</th>
               <th style="text-align: right">Prezzo totale</th>
               <tbody>
                 <td>2 persone 2 notti (26.03.-28.03.) Prima colazione</td>
@@ -684,12 +612,7 @@
           </b-jumbotron>
         </div>
         <b-card no-body class="mb-1">
-          <b-card-header
-            header-tag="header"
-            id="accord-heading"
-            class="p-1"
-            role="tab"
-          >
+          <b-card-header header-tag="header" id="accord-heading" class="p-1" role="tab">
             <b-button
               style="
                 text-align: left;
@@ -702,7 +625,10 @@
               v-b-toggle.accordion-9
             >
               Un viaggio nella nostra Imperial Suite
-              <i aria-hidden="true" class="fa fa-angle-down right-icon"></i>
+              <i
+                aria-hidden="true"
+                class="fa fa-angle-down right-icon"
+              ></i>
             </b-button>
           </b-card-header>
           <b-collapse id="accordion-9" accordion="my-accordion" role="tabpanel">
@@ -716,12 +642,7 @@
           </b-collapse>
         </b-card>
         <b-card no-body class="mb-1">
-          <b-card-header
-            header-tag="header"
-            id="accord-heading"
-            class="p-1"
-            role="tab"
-          >
+          <b-card-header header-tag="header" id="accord-heading" class="p-1" role="tab">
             <b-button
               style="
                 text-align: left;
@@ -738,12 +659,7 @@
               <i aria-hidden="true" class="fa fa-angle-down right-icon"></i>
             </b-button>
           </b-card-header>
-          <b-collapse
-            id="accordion-3"
-            visible
-            accordion="my-accordion"
-            role="tabpanel"
-          >
+          <b-collapse id="accordion-3" visible accordion="my-accordion" role="tabpanel">
             <b-card-body>
               <b-card-text style="text-align: left">
                 <div v-html="`${todos.info[2].testo}`"></div>
@@ -752,12 +668,7 @@
           </b-collapse>
         </b-card>
         <b-card no-body class="mb-1">
-          <b-card-header
-            header-tag="header"
-            id="accord-heading"
-            class="p-1"
-            role="tab"
-          >
+          <b-card-header header-tag="header" id="accord-heading" class="p-1" role="tab">
             <b-button
               style="
                 text-align: left;
@@ -774,12 +685,7 @@
               <i aria-hidden="true" class="fa fa-angle-down right-icon"></i>
             </b-button>
           </b-card-header>
-          <b-collapse
-            id="accordion-7"
-            visible
-            accordion="my-accordion"
-            role="tabpanel"
-          >
+          <b-collapse id="accordion-7" visible accordion="my-accordion" role="tabpanel">
             <b-card-body>
               <b-card-text style="text-align: left">
                 <div v-html="`${todos.info[3].testo.slice()}`"></div>
@@ -788,12 +694,7 @@
           </b-collapse>
         </b-card>
         <b-card no-body class="mb-1">
-          <b-card-header
-            header-tag="header"
-            id="accord-heading"
-            class="p-1"
-            role="tab"
-          >
+          <b-card-header header-tag="header" id="accord-heading" class="p-1" role="tab">
             <b-button
               style="
                 text-align: left;
@@ -807,35 +708,27 @@
               variant="info"
             >
               Listino trattamenti centro benessere
-              <i aria-hidden="true" class="fa fa-angle-down right-icon"></i>
+              <i
+                aria-hidden="true"
+                class="fa fa-angle-down right-icon"
+              ></i>
             </b-button>
           </b-card-header>
-          <b-collapse
-            id="accordion-10"
-            visible
-            accordion="my-accordion"
-            role="tabpanel"
-          >
+          <b-collapse id="accordion-10" visible accordion="my-accordion" role="tabpanel">
             <b-card-body>
               <b-card-text style="text-align: left">
                 Per visionare il listino trattamenti, consigliamo di utilizzare
                 il seguente link
                 <!-- <a>link</a> -->
-                <!-- <a href="http://www.borgobrufa.it/it/benessere/itrattamenti/108-0.html">link</a> --> </b-card-text
-              >Tali servizi vanno prenotati prima dell’arrivo in struttura
+                <!-- <a href="http://www.borgobrufa.it/it/benessere/itrattamenti/108-0.html">link</a> -->
+              </b-card-text>Tali servizi vanno prenotati prima dell’arrivo in struttura
               presso la Reception della Spa chiamando il numero 075/9883220 o
               scrivendo all'indirizzo benessere@borgobrufa.it .
             </b-card-body>
           </b-collapse>
         </b-card>
         <div class="text-right mt-3">
-          <button
-            class="btn btn-lg btn-warning"
-            @click="gotonextpage()"
-            :key="gotonextpage"
-          >
-            Confirm
-          </button>
+          <button class="btn btn-lg btn-warning" @click="gotonextpage()" :key="gotonextpage">Confirm</button>
         </div>
       </div>
       <div class="container-fluid cont">
@@ -871,9 +764,7 @@
     <div class="container-fluid contai" style="padding-left: 112px">
       <div class="row">
         <div class="col-md-7">
-          <h1 style="font-family: -webkit-pictograph; font-size: 32px">
-            HA DOMANDE SULL'OFFERATO?
-          </h1>
+          <h1 style="font-family: -webkit-pictograph; font-size: 32px">HA DOMANDE SULL'OFFERATO?</h1>
           <p style="color: grey; font-size: 15px">
             Servono informazioni aggiuntive? Non esiti a contattarci sul
             messenger!
@@ -894,9 +785,7 @@
               left: 59px;
             "
           >
-            <a class="button2 btncontact" style="color: white"
-              >Ci contatti nel messenger</a
-            >
+            <a class="button2 btncontact" style="color: white">Ci contatti nel messenger</a>
           </div>
         </div>
 
@@ -950,9 +839,7 @@
             <h4>IMPRESSIONI</h4>
             <p
               style="font-size: 14px; color: darkslategrey; padding-bottom: 2px"
-            >
-              Alcune foto del nostro albergo
-            </p>
+            >Alcune foto del nostro albergo</p>
           </div>
         </div>
         <div class="col-md-2" style="padding-right: 0px; padding-left: 0px">
@@ -982,16 +869,13 @@
           <i class="fa fa-map-marker" style="color: grey"></i>&nbsp; &nbsp;
           <span>Via del Colle, 38, 06089, Brufa di Torgiano (PG)</span>
           <br />
-          <i class="fa fa-phone" style="color: grey; padding-top: 8px"></i
-          >&nbsp;&nbsp;
+          <i class="fa fa-phone" style="color: grey; padding-top: 8px"></i>&nbsp;&nbsp;
           <span>+390759883</span>
           <br />
-          <i class="fa fa-envelope" style="color: grey; padding-top: 8px"></i
-          >&nbsp; &nbsp;
+          <i class="fa fa-envelope" style="color: grey; padding-top: 8px"></i>&nbsp; &nbsp;
           <span>info@borgobrufa.it</span>
           <br />
-          <i class="fa fa-globe" style="color: grey; padding-top: 8px"></i
-          >&nbsp; &nbsp;
+          <i class="fa fa-globe" style="color: grey; padding-top: 8px"></i>&nbsp; &nbsp;
           <span>www.borgobrufa.it</span>
           <!-- <i class="fa fa-phone" style='font-size:24px'><span>sbsb</span></i>
          
@@ -1028,22 +912,14 @@
           <ul class="iconsocial">
             <li>
               <b-link href="#">
-                <img
-                  src="../assets/you.png"
-                  style="width: 50px"
-                  alt="youtube"
-                />
+                <img src="../assets/you.png" style="width:50px" alt="youtube" />
 
                 <!-- <i class="fa fa-youtube"></i> -->
               </b-link>
             </li>
             <li>
               <b-link href="#">
-                <img
-                  src="../assets/whatsapp.png"
-                  style="width: 40px"
-                  alt="what"
-                />
+                <img src="../assets/whatsapp.png" style="width:40px" alt="what" />
 
                 <!-- <i class="fa fa-whatsapp"></i> -->
               </b-link>
@@ -1052,7 +928,7 @@
               <b-link href="#">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1000px-Telegram_logo.svg.png"
-                  style="width: 40px"
+                  style="width:40px"
                   alt="tele"
                 />
 
@@ -1067,13 +943,12 @@
     <footer>
       <div class="bordertop text-center pt-2 pb-2">
         <div class="links">
-          <span class="small" style="color: gray"
-            >© 2020 Borgobrufa SPA Resort</span
-          >
+          <span class="small" style="color: gray">© 2020 Borgobrufa SPA Resort</span>
           &nbsp; &nbsp;
-          <span class="small" style="padding-left: 23px; color: gray"
-            >Part. IVA 02535970541</span
-          >
+          <span
+            class="small"
+            style="padding-left: 23px; color: gray"
+          >Part. IVA 02535970541</span>
           &nbsp;
           <span
             class="small"
@@ -1083,21 +958,16 @@
               class="footerlink small default"
               href="/private-area/c/pp/62480/Jg9vtfOWQkiCbmKHEO40Ng"
               target="_blank"
-              >Informativa sulla privacy</a
-            >
+            >Informativa sulla privacy</a>
           </span>
 
-          <span
-            class="offer-pdf small"
-            style="padding-left: 23px; font-size: 18px; color: gray"
-          >
+          <span class="offer-pdf small" style="padding-left: 23px; font-size: 18px; color: gray">
             <a
               class="footerlink small default"
               href="/Resources/OfferPdf/256200/Jg9vtfOWQkiCbmKHEO40Ng"
               target="_blank"
               style="color: gray"
-              >Visualizzazione stampa</a
-            >
+            >Visualizzazione stampa</a>
           </span>
           <div class="clear">&nbsp;</div>
         </div>
@@ -1115,11 +985,11 @@
         /></a>-->
         <div class="clear">&nbsp;</div>
       </div>
-      <!--<div class="footer-icon">
+      <div class="footer-icon">
         <a href="#">
           <i class="fa fa-comments-o"></i>
         </a>
-      </div>-->
+      </div>
     </footer>
   </div>
 </template>
@@ -1131,13 +1001,13 @@
 import Todos from "../components/Todos";
 import json from "../assets/proposal.json";
 // import AddTodo from "../components/AddTodo";
-import Header from "../components/layout/header";
 import axios from "axios";
+import Header from "../components/layout/header";
 export default {
   name: "Home",
   components: {
     Todos,
-    Header,
+    Header
   },
   data() {
     return {
@@ -1149,7 +1019,7 @@ export default {
       showMessage: true,
       showMessage2: false,
       selected: true,
-      isclass: "",
+      isclass: ""
     };
   },
   methods: {
@@ -1160,10 +1030,10 @@ export default {
       console.log("hello");
       this.$router.push({ path: "/thankyou" });
     },
-    activate: function (el) {
+    activate: function(el) {
       console.log("el", el);
       this.active_el = el;
-    },
+    }
   },
 
   created() {
@@ -1171,30 +1041,18 @@ export default {
       .get(
         "https://us-central1-hrcrm-439b3.cloudfunctions.net/webApi/api/v1/preventivi/86CEEBD2-4A66-4B73-91DD-887D68BEAE1D"
       )
-      .then((res) => ((this.todos = res.data), console.log("hi", res.data)))
-      .catch((err) => console.log(err));
+      .then(res => ((this.todos = res.data), console.log("hi", res.data)))
+      .catch(err => console.log(err));
   },
   mounted() {
     axios
       .get(
         "https://us-central1-hrcrm-439b3.cloudfunctions.net/webApi/api/v1/preventivi/277B4311-9922-450A-87CC-57A5447D5AB4"
       )
-      .then((res) => ((this.proposal = res.data), console.log("hi", res.data)))
-      .catch((err) => console.log(err));
-  },
+      .then(res => ((this.proposal = res.data), console.log("hi", res.data)))
+      .catch(err => console.log(err));
+  }
 };
-
-var Tawk_API = Tawk_API || {},
-  Tawk_LoadStart = new Date();
-(function () {
-  var s1 = document.createElement("script"),
-    s0 = document.getElementsByTagName("script")[0];
-  s1.async = true;
-  s1.src = "https://embed.tawk.to/564f634590d1bced690e0633/default";
-  s1.charset = "UTF-8";
-  s1.setAttribute("crossorigin", "*");
-  s0.parentNode.insertBefore(s1, s0);
-})();
 </script>
 
 <style>
@@ -1327,10 +1185,6 @@ ul.iconsocial li {
   list-style: none;
   padding: 5px;
 }
-.logo img {
-  width: 150px;
-  border-radius: 5px;
-}
 
 /* ul.iconsocial li a {
   font-size: 18px;
@@ -1454,18 +1308,6 @@ h1.navbar-brand.mb-0 {
     right: 0px !important;
     bottom: 0px !important;
   }
-  .persoal-cc h3 {
-    width: 75% !important;
-    font-size: 18px !important;
-  }
-
-  .persoal-cc h2 {
-    font-size: 14px !important;
-  }
-
-  .tabsbv ul li {
-    font-size: 16px !important;
-  }
   h1.navbar-brand.mb-0 {
     margin: auto !important;
   }
@@ -1487,6 +1329,9 @@ h1.navbar-brand.mb-0 {
     display: block;
   }
 
+  .tabsbv ul li.active.border_new {
+    border: 0px;
+  }
   p.card-text ul {
     padding: 0px !important;
     text-align: left !important;
