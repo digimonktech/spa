@@ -170,6 +170,8 @@
                 variant="light"
                 v-b-toggle="`foo-${data1.id}`"
                 block
+                @click="selected = `${data1.id}`,activate(data1.id)"
+                v-on:click="show = `foo-${data1.id}`"
               >
                 soluzioni {{ data1.id }}
                 <i class="fa fa-angle-down right-icon" aria-hidden="true"></i>
