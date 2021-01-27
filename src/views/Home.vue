@@ -88,7 +88,12 @@
               style="max-width: 400px"
             >
               <div class="text-pp">
-                <img :src="`${data1.img}`" class="img-fluid w-100 d-block" />
+                <img
+                  :src="`${data1.img}`"
+                  alt="Not Found"
+                  onerror="this.onerror=null;this.src='https://i.ibb.co/gj3Hr6v/placeholder.png';"
+                  class="img-fluid w-100 d-block"
+                />
                 <div class="perposal-name">Soluzione {{ data1.id }}</div>
               </div>
               <div class="perposal-text">
@@ -117,16 +122,15 @@
                       id="confirm2"
                       @click="
                         activate(data1.id);
-                        selected = `${data1.id}`;
-                      "
+                        selected = `${data1.id}`; scrollMethod()"
                       :class="{ active: active_el == data1.id }"
                       v-on:click="show = `foo-${data1.id}`"
                     >Details</b-link>
                     <b-link
+                      id="show-btn"
+                      @click="$bvModal.show('bv-modal-example')"
                       href="#"
                       class="btn btn-lg btn-outline-warning"
-                      @click="gotonextpage()"
-                      :key="gotonextpage"
                     >Confirm</b-link>
                   </div>
                 </div>
@@ -140,12 +144,10 @@
     <div class="tabsbv mt-5">
       <b-container>
         <ul>
-          <!-- @click="activate(data1.id)"
-          :class="{ border_new: active_el == data1.id }"-->
           <li
             v-for="data1 in proposal.soluzioni"
             :key="data1"
-            @click="selected = `${data1.id}`,activate(data1.id)"
+            @click="selected = `${data1.id}`,activate(data1.id),scrollMethod(id)"
             :class="{ active: selected === `${data1.id}` }"
             v-on:click="show = `foo-${data1.id}`"
           >proposal {{ data1.id }}</li>
@@ -161,17 +163,17 @@
           <b-card no-body class="mb-1">
             <b-card-header header-tag="header" id="accord-heading" role="tab">
               <b-button
+                @click="selected = `${data1.id}`,activate(data1.id)"
+                v-on:click="show = `foo-${data1.id}`"
                 style="
-                text-align: left;
-                background: transparent;
-                border: none;
-                font-size: 22px;
-              "
+                  text-align: left;
+                  background: transparent;
+                  border: none;
+                  font-size: 22px;
+                "
                 variant="light"
                 v-b-toggle="`foo-${data1.id}`"
                 block
-                @click="selected = `${data1.id}`,activate(data1.id)"
-                v-on:click="show = `foo-${data1.id}`"
               >
                 soluzioni {{ data1.id }}
                 <i class="fa fa-angle-down right-icon" aria-hidden="true"></i>
@@ -730,7 +732,7 @@
           </b-collapse>
         </b-card>
         <div class="text-right mt-3">
-          <button class="btn btn-lg btn-warning" @click="gotonextpage()" :key="gotonextpage">Confirm</button>
+          <button class="btn btn-lg btn-warning" @click="$bvModal.show('bv-modal-example')">Confirm</button>
         </div>
       </div>
       <div class="container-fluid cont">
@@ -914,14 +916,14 @@
           <ul class="iconsocial">
             <li>
               <b-link href="#">
-                <img src="../assets/you.png" style="width:50px" alt="youtube" />
+                <img src="../assets/you.png" style="width: 50px" alt="youtube" />
 
                 <!-- <i class="fa fa-youtube"></i> -->
               </b-link>
             </li>
             <li>
               <b-link href="#">
-                <img src="../assets/whatsapp.png" style="width:40px" alt="what" />
+                <img src="../assets/whatsapp.png" style="width: 40px" alt="what" />
 
                 <!-- <i class="fa fa-whatsapp"></i> -->
               </b-link>
@@ -930,7 +932,7 @@
               <b-link href="#">
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1000px-Telegram_logo.svg.png"
-                  style="width:40px"
+                  style="width: 40px"
                   alt="tele"
                 />
 
@@ -987,12 +989,18 @@
         /></a>-->
         <div class="clear">&nbsp;</div>
       </div>
-      <div class="footer-icon">
+      <!--<div class="footer-icon">
         <a href="#">
           <i class="fa fa-comments-o"></i>
         </a>
-      </div>
+      </div>-->
     </footer>
+
+    <b-modal id="bv-modal-example" hide-footer hide-header centered>
+      <div class="d-block text-center pt-5 pb-5">
+        <h1>Thank you for booking!</h1>
+      </div>
+    </b-modal>
   </div>
 </template>
 
@@ -1003,8 +1011,8 @@
 import Todos from "../components/Todos";
 import json from "../assets/proposal.json";
 // import AddTodo from "../components/AddTodo";
-import axios from "axios";
 import Header from "../components/layout/header";
+import axios from "axios";
 export default {
   name: "Home",
   components: {
@@ -1035,6 +1043,16 @@ export default {
     activate: function(el) {
       console.log("el", el);
       this.active_el = el;
+    },
+    scrollMethod(id) {
+      console.log("scrolls", id, this.show);
+      const el = document.getElementById(`${this.show}`);
+
+      el.scrollIntoView({
+        behavior: "smooth"
+        // block: "start"
+        // inline: "start"
+      });
     }
   },
 
@@ -1055,6 +1073,18 @@ export default {
       .catch(err => console.log(err));
   }
 };
+
+// var Tawk_API = Tawk_API || {};
+// let Tawk_LoadStart = new Date();
+(function() {
+  var s1 = document.createElement("script"),
+    s0 = document.getElementsByTagName("script")[0];
+  s1.async = true;
+  s1.src = "https://embed.tawk.to/564f634590d1bced690e0633/default";
+  s1.charset = "UTF-8";
+  s1.setAttribute("crossorigin", "*");
+  s0.parentNode.insertBefore(s1, s0);
+})();
 </script>
 
 <style>
@@ -1187,6 +1217,10 @@ ul.iconsocial li {
   list-style: none;
   padding: 5px;
 }
+.logo img {
+  width: 150px;
+  border-radius: 5px;
+}
 
 /* ul.iconsocial li a {
   font-size: 18px;
@@ -1310,6 +1344,18 @@ h1.navbar-brand.mb-0 {
     right: 0px !important;
     bottom: 0px !important;
   }
+  .persoal-cc h3 {
+    width: 75% !important;
+    font-size: 18px !important;
+  }
+
+  .persoal-cc h2 {
+    font-size: 14px !important;
+  }
+
+  .tabsbv ul li {
+    font-size: 16px !important;
+  }
   h1.navbar-brand.mb-0 {
     margin: auto !important;
   }
@@ -1331,9 +1377,6 @@ h1.navbar-brand.mb-0 {
     display: block;
   }
 
-  .tabsbv ul li.active.border_new {
-    border: 0px;
-  }
   p.card-text ul {
     padding: 0px !important;
     text-align: left !important;
