@@ -1,4 +1,4 @@
-# firstproject
+# Spa
 
 ## Project setup
 ```
