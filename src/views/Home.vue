@@ -1,6 +1,6 @@
+
 <template>
   <div id="HOME">
-    <Header />
     <Todos v-bind:todos="todos" />
     <!-- <Json v-bind:json="json" /> -->
 
@@ -77,61 +77,64 @@
     </div>
 
     <div class="full-perposal">
-      <!--<h1>{{ data1.id }}</h1>-->
-
       <b-container>
         <b-row>
-          <b-col md="6" v-for="data1 in proposal.soluzioni" :key="data1">
-            <div
-              @click="activate(data1.id)"
-              :class="{ border_new: active_el == data1.id }"
-              style="max-width: 400px"
-            >
+          <b-col md="6">
+            <div class="perposal-box mx-auto" style="max-width:400px;">
               <div class="text-pp">
                 <img
-                  :src="`${data1.img}`"
-                  alt="Not Found"
-                  onerror="this.onerror=null;this.src='https://i.ibb.co/gj3Hr6v/placeholder.png';"
+                  src="https://www.hotelbernard.it/wp-content/uploads/sites/33/HB_superior_1-4_mod.jpg"
                   class="img-fluid w-100 d-block"
                 />
-                <div class="perposal-name">Soluzione {{ data1.id }}</div>
+                <div class="perposal-name">Soluzione 1</div>
               </div>
               <div class="perposal-text">
                 <div class="text-left">
                   <h3 class="font-weight-light subtitle-2">ARRIVO / PARTENZA</h3>
-                  <h4>
-                    {{ data1.dal }} fino a
-                    {{ data1.al }}
-                  </h4>
+                  <h4>{{myJson.soluzioni[0].dal}} fino a {{myJson.soluzioni[0].al}}</h4>
                   <h3 class="font-weight-light subtitle-2">CATEGORIA CAMERA</h3>
-                  <h4>{{ data1.tipologie }}</h4>
+                  <h4>{{myJson.soluzioni[0].tipologie}}</h4>
                   <h3 class="font-weight-light subtitle-2">PERSONE / TRATTAMENTO</h3>
-                  <h4>
-                    {{ data1.occupancy }} /
-                    {{ data1.trattamento }}
-                  </h4>
+                  <h4>{{myJson.soluzioni[0].occupancy}} / {{myJson.soluzioni[0].trattamento}}</h4>
                   <div
                     class="text-uppercase headline font-weight-bold text-right sizebox"
-                  >€ {{ data1.prezzo }}</div>
+                  >€ {{myJson.soluzioni[0].prezzo}}</div>
 
+                  <div class="text-uppercase headline font-weight-bold text-right mt-4">
+                    <b-link class="btn btn-lg btn-outline-warning" @click="activeTab(true)">Details</b-link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </b-col>
+
+          <b-col md="6">
+            <div class="perposal-box mx-auto" style="max-width:400px;">
+              <div class="text-pp">
+                <img
+                  src="https://www.hotelbernard.it/wp-content/uploads/sites/33/HB_suite1-75-2.jpg"
+                  class="img-fluid w-100 d-block"
+                />
+                <div class="perposal-name">Soluzione 2</div>
+              </div>
+              <div class="perposal-text">
+                <div class="text-left">
+                  <h3 class="font-weight-light subtitle-2">ARRIVO / PARTENZA</h3>
+                  <h4>{{myJson.soluzioni[0].dal}} fino a {{myJson.soluzioni[0].al}}</h4>
+                  <h3 class="font-weight-light subtitle-2">CATEGORIA CAMERA</h3>
+                  <h4>{{myJson.soluzioni[0].tipologie}}</h4>
+                  <h3 class="font-weight-light subtitle-2">PERSONE / TRATTAMENTO</h3>
+                  <h4>{{myJson.soluzioni[0].occupancy}} / {{myJson.soluzioni[0].trattamento}}</h4>
                   <div
-                    class="align-items-center d-flex font-weight-bold headline justify-content-between mt-4 text-uppercase"
-                  >
-                    <b-link
+                    class="text-uppercase headline font-weight-bold text-right sizebox"
+                  >€ {{myJson.soluzioni[0].prezzo}}</div>
+                  <div class="text-uppercase headline font-weight-bold text-right mt-4">
+                    <b-link class="btn btn-lg btn-outline-warning" @click="activeTab(true)">Details</b-link>
+
+                    <!-- <b-button
                       class="btn btn-lg btn-outline-warning"
-                      id="confirm2"
-                      @click="
-                        activate(data1.id);
-                        selected = `${data1.id}`; scrollMethod()"
-                      :class="{ active: active_el == data1.id }"
-                      v-on:click="show = `foo-${data1.id}`"
-                    >Details</b-link>
-                    <b-link
-                      id="show-btn"
-                      @click="$bvModal.show('bv-modal-example')"
-                      href="#"
-                      class="btn btn-lg btn-outline-warning"
-                    >Confirm</b-link>
+                      @click.native="selected_tab_name = 1"
+                    >Details1</b-button>-->
                   </div>
                 </div>
               </div>
@@ -141,388 +144,192 @@
       </b-container>
     </div>
 
-    <div class="tabsbv mt-5">
+    <div class="prosoal-pricebox pt-5 pb-5">
       <b-container>
-        <ul>
-          <li
-            v-for="data1 in proposal.soluzioni"
-            :key="data1"
-            @click="selected = `${data1.id}`,activate(data1.id),scrollMethod(id)"
-            :class="{ active: selected === `${data1.id}` }"
-            v-on:click="show = `foo-${data1.id}`"
-          >proposal {{ data1.id }}</li>
-          <!-- <li
-            @click="selected = 2"
-            :class="{ active: selected === 2 }"
-            v-on:click="(showMessage = false), (showMessage2 = true)"
-          >
-            proposal 2
-          </li>-->
-        </ul>
-        <div class="proposal-new-box" v-for="data1 in proposal.soluzioni" :key="data1">
-          <b-card no-body class="mb-1">
-            <b-card-header header-tag="header" id="accord-heading" role="tab">
-              <b-button
-                @click="selected = `${data1.id}`,activate(data1.id)"
-                v-on:click="show = `foo-${data1.id}`"
-                style="
-                  text-align: left;
-                  background: transparent;
-                  border: none;
-                  font-size: 22px;
-                "
-                variant="light"
-                v-b-toggle="`foo-${data1.id}`"
-                block
-              >
-                soluzioni {{ data1.id }}
-                <i class="fa fa-angle-down right-icon" aria-hidden="true"></i>
-              </b-button>
-            </b-card-header>
-            <b-collapse :id="`foo-${data1.id}`" accordian="acc1" visible role="tabpanel">
-              <b-card-body v-if="show == `foo-${data1.id}`">
-                <div>
-                  <div class="persoal-cc">
-                    <h3>Soluzione soggiorno n. 1 nel dettaglio</h3>
+        <b-tabs>
+          <b-tab :active="selected_tab_name === 'first_tab'"></b-tab>
+          <b-tab :active="selected_tab_name === 'second_tab'"></b-tab>
+        </b-tabs>
+        <b-card no-body>
+          <b-tabs pills card>
+            <b-tab title="proposal 1" v-on="activeTab" :class="{active: active === true}">
+              <b-card-text>
+                <div class="persoal-cc">
+                  <h3>Soluzione soggiorno n. 1 nel dettaglio</h3>
 
-                    <h2>€ {{ data1.prezzo }}</h2>
+                  <h2>€ {{myJson.soluzioni[0].prezzo}}</h2>
+                </div>
+
+                <div class="sliderbanner">
+                  <h4>{{myJson.soluzioni[0].tipologie}}</h4>
+
+                  <div>
+                    <b-carousel
+                      id="carousel-11"
+                      v-model="slide"
+                      :interval="4000"
+                      controls
+                      indicators
+                      background="#ababab"
+                      img-width="1024"
+                      img-height="480"
+                      style="text-shadow: 1px 1px 2px #333;"
+                    >
+                      <!-- Text slides with image -->
+                      <b-carousel-slide
+                        v-for="data of myJson.soluzioni[0].galleria"
+                        v-bind:key="data + Math.random()"
+                        :img-src="`${data.src}`"
+                      ></b-carousel-slide>
+                    </b-carousel>
                   </div>
 
-                  <div class="sliderbanner">
-                    <h4>{{ data1.tipologie }}</h4>
-
-                    <div>
-                      <b-carousel
-                        :id="`${data1.id}`"
-                        v-model="slide"
-                        :interval="4000"
-                        controls
-                        indicators
-                        background="#ababab"
-                        img-width="1024"
-                        img-height="480"
-                        style="text-shadow: 1px 1px 2px #333"
-                      >
-                        <!-- Text slides with image -->
-                        <b-carousel-slide
-                          v-for="data of data1.galleria"
-                          v-bind:key="data + Math.random()"
-                          :img-src="`${data.src}`"
-                        ></b-carousel-slide>
-                      </b-carousel>
-                    </div>
-
-                    <div class="porsoal-new1">
-                      <!-- <p>
-                      The 35 sqm suite is located on the 6th floor, it is a
-                      refuge for 2 or 3 people to get lost in, where you can
-                      find large spaces of light suspended halfway between sky
-                      and sea. Completely renovated, it consists of a bedroom
-                      with a king size bed and a comfortable living area
-                    </p>
-                    <p>
-                      The Suite is completed by a 47 sqm terrace overlooking the
-                      sea with comfortable loungers.
-                    </p>
+                  <div class="porsoal-new1">
+                    <p>The 35 sqm suite is located on the 6th floor, it is a refuge for 2 or 3 people to get lost in, where you can find large spaces of light suspended halfway between sky and sea. Completely renovated, it consists of a bedroom with a king size bed and a comfortable living area</p>
+                    <p>The Suite is completed by a 47 sqm terrace overlooking the sea with comfortable loungers.</p>
                     <p>
                       Services included
-                      <br />Simmons mattressAir ConditioningCushions menu for
-                      better sleepLCD TVWi-FiPhonMinifridgeSafe boxBathrobe and
-                      slippersExclusive courtesy set1 umbrella and 2 sunbeds in
-                      the 1st row of the sea at our private beach chalet 75
-                      </p>-->
-                      <b-row>
-                        <b-col md="6">
-                          <div class="des-tile text-left">
-                            <h2>PENSIONE COMPLETA</h2>
-                            <p>
-                              Per 2 persone, Da Sab 12 Dic a Sab 19 dic (7
-                              Notti)
-                            </p>
-                            <b-button variant="outline-success">Da Parte Dell'operatore:-10%</b-button>
-                          </div>
-                        </b-col>
+                      <br />Simmons mattressAir ConditioningCushions menu for better sleepLCD TVWi-FiPhonMinifridgeSafe boxBathrobe and
+                      slippersExclusive courtesy set1 umbrella and 2 sunbeds in the 1st row of the sea at our private beach chalet 75
+                    </p>
+                  </div>
 
-                        <b-col md="6">
-                          <div class="des-tile text-right">
-                            <span class="suboo">
-                              <i class="fa fa-euro"></i>
-                              840,00
-                              <sub>,00</sub>
-                            </span>
-                            <div class="fv">
-                              <i class="fa fa-euro"></i>
-                              756
-                              <sub>,00</sub>
-                            </div>
-                          </div>
-                        </b-col>
-                      </b-row>
+                  <div class="mt-3 mb-3 destailsdd">
+                    <div class="row">
+                      <div class="text-left body-1 font-weight-bold col">Descrizione</div>
+                      <div class="text-right text-uppercase body-1 font-weight-bold col">PREZZO</div>
                     </div>
-
-                    <div v-b-toggle.collapse-de class="detailsv">
-                      <i class="fa fa-plus"></i> Details
-                    </div>
-
-                    <b-collapse id="collapse-de" class="mt-2">
-                      <div class="destailsdd">
-                        <div class="row border-box">
-                          <div class="text-left body-1 font-weight-bold col">Descrizione</div>
-                          <div class="text-right text-uppercase body-1 font-weight-bold col">PREZZO</div>
-                        </div>
-                        <div
-                          class="row border-box"
-                          v-bind:key="prezzi + Math.random()"
-                          v-for="prezzi in data1.risorse[0].prezzi"
-                        >
-                          <div class="text-left body-1 font-weight-light col">
-                            {{ prezzi.descrizione }}
-                            <!-- SUITE - BB from 12/30/2020 to 12/31/2020 -->
-                            <div></div>
-                          </div>
-                          <div class="text-right text-uppercase body-1 col">€ {{ prezzi.importo }}</div>
-                        </div>
+                    <div
+                      class="row"
+                      v-bind:key="prezzi + Math.random()"
+                      v-for="prezzi in myJson.soluzioni[0].risorse[0].prezzi"
+                    >
+                      <div class="text-left body-1 font-weight-light col">
+                        {{prezzi.descrizione}}
+                        <!-- SUITE - BB from 12/30/2020 to 12/31/2020 -->
+                        <div></div>
                       </div>
-                    </b-collapse>
-
-                    <div class="des-tile text-left mt-3">
-                      <h2 class="exrea-service">
-                        SERVICE EXTRA
-                        <span>
-                          <i class="fa fa-euro"></i>
-                          50
-                          <sub>,00</sub>
-                        </span>
-                      </h2>
+                      <div class="text-right text-uppercase body-1 col">€ {{prezzi.importo}}</div>
                     </div>
-                    <div v-b-toggle.collapse-b class="detailsv">
-                      <i class="fa fa-plus"></i> Details
-                    </div>
-                    <b-collapse id="collapse-b" class="mt-2">
-                      <div class="destailsdd">
-                        <div class="row border-box">
-                          <div class="text-left body-1 font-weight-light col">
-                            N.7 aria condizionata
-                            <div></div>
-                          </div>
-                          <div class="text-right text-uppercase body-1 col">Incluso</div>
-                        </div>
-
-                        <div class="row border-box">
-                          <div class="text-left body-1 font-weight-light col">
-                            n.7 Posto auto
-                            <div></div>
-                          </div>
-                          <div class="text-right text-uppercase body-1 col">
-                            <div class="des-tile text-right">
-                              <div class="fv">
-                                <i class="fa fa-euro"></i>
-                                70
-                                <sub>,00</sub>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                    <div class="row">
+                      <div class="text-left body-1 font-weight-light col">
+                        <!-- Adult - BB from 12/30/2020 to 12/31/2020 -->
+                        <div></div>
                       </div>
-                    </b-collapse>
-                    <div class="row mt-3">
-                      <div class="text-left headline font-weight-light col font-32">Total price</div>
+                      <!-- <div class="text-right text-uppercase body-1 col">€ 40.00</div> -->
+                    </div>
+                    <div class="row">
+                      <div class="text-left body-1 font-weight-light col">
+                        <!-- Adult - BB from 12/30/2020 to 12/31/2020 -->
+                        <div></div>
+                      </div>
+                      <!-- <div class="text-right text-uppercase body-1 col">€ 40.00</div> -->
+                    </div>
+                    <div class="row">
+                      <div class="text-left headline font-weight-light col">Total price</div>
                       <div
-                        class="text-right text-uppercase headline font-weight-bold col font-32"
-                      >€ {{ data1.prezzo }}</div>
+                        class="text-right text-uppercase headline font-weight-bold col"
+                      >€ {{myJson.soluzioni[0].prezzo}}</div>
                     </div>
                   </div>
                 </div>
-                <div v-if="showMessage2">
-                  <b-card-text>
-                    <div class="persoal-cc">
-                      <h3>Living room solution n. 2 in detail</h3>
+              </b-card-text>
+            </b-tab>
+            <b-tab title="proposal 2" v-model="activeTab" :active="`${active}`">
+              <b-card-text>
+                <div class="persoal-cc">
+                  <h3>Living room solution n. 2 in detail</h3>
 
-                      <h2>€ 180</h2>
-                    </div>
-
-                    <div class="sliderbanner">
-                      <h4>Standard</h4>
-
-                      <div>
-                        <b-carousel
-                          id="carousel-`${data1.id}`"
-                          v-model="slide"
-                          :interval="4000"
-                          controls
-                          indicators
-                          background="#ababab"
-                          img-width="1024"
-                          img-height="480"
-                          style="text-shadow: 1px 1px 2px #333"
-                        >
-                          <!-- Text slides with image -->
-                          <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=52"></b-carousel-slide>
-
-                          <!-- Slides with custom text -->
-                          <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54"></b-carousel-slide>
-
-                          <!-- Slides with image only -->
-                          <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
-
-                          <!-- Slides with img slot -->
-                          <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-                          <b-carousel-slide>
-                            <template #img>
-                              <img
-                                class="d-block img-fluid w-100"
-                                width="1024"
-                                height="480"
-                                src="https://picsum.photos/1024/480/?image=55"
-                                alt="image slot"
-                              />
-                            </template>
-                          </b-carousel-slide>
-
-                          <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-                          <!-- <b-carousel-slide
-                          caption="Blank Image"
-                          img-blank
-                          img-alt="Blank image"
-                          ></b-carousel-slide>-->
-                        </b-carousel>
-                      </div>
-
-                      <div class="porsoal-new1">
-                        <!-- <p>
-                      The 35 sqm suite is located on the 6th floor, it is a
-                      refuge for 2 or 3 people to get lost in, where you can
-                      find large spaces of light suspended halfway between sky
-                      and sea. Completely renovated, it consists of a bedroom
-                      with a king size bed and a comfortable living area
-                    </p>
-                    <p>
-                      The Suite is completed by a 47 sqm terrace overlooking the
-                      sea with comfortable loungers.
-                    </p>
-                    <p>
-                      Services included
-                      <br />Simmons mattressAir ConditioningCushions menu for
-                      better sleepLCD TVWi-FiPhonMinifridgeSafe boxBathrobe and
-                      slippersExclusive courtesy set1 umbrella and 2 sunbeds in
-                      the 1st row of the sea at our private beach chalet 75
-                        </p>-->
-                        <b-row>
-                          <b-col md="6">
-                            <div class="des-tile text-left">
-                              <h2>PENSIONE COMPLETA</h2>
-                              <p>
-                                Per 2 persone, Da Sab 12 Dic a Sab 19 dic (7
-                                Notti)
-                              </p>
-                              <b-button variant="outline-success">Da Parte Dell'operatore:-10%</b-button>
-                            </div>
-                          </b-col>
-
-                          <b-col md="6">
-                            <div class="des-tile text-right">
-                              <span class="suboo">
-                                <i class="fa fa-euro"></i>
-                                840,00
-                                <sub>,00</sub>
-                              </span>
-                              <div class="fv">
-                                <i class="fa fa-euro"></i>
-                                756
-                                <sub>,00</sub>
-                              </div>
-                            </div>
-                          </b-col>
-                        </b-row>
-                      </div>
-
-                      <div v-b-toggle.collapse-c class="detailsv">
-                        <i class="fa fa-plus"></i> Details
-                      </div>
-
-                      <b-collapse id="collapse-c" visible class="mt-2">
-                        <div class="destailsdd">
-                          <div class="row border-box">
-                            <div class="text-left body-1 font-weight-bold col">Descrizione</div>
-                            <div
-                              class="text-right text-uppercase body-1 font-weight-bold col"
-                            >PREZZO</div>
-                          </div>
-                          <div
-                            class="row border-box"
-                            v-bind:key="prezzi + Math.random()"
-                            v-for="prezzi in data1.risorse[0].prezzi"
-                          >
-                            <div class="text-left body-1 font-weight-light col">
-                              {{ prezzi.descrizione }}
-                              <!-- SUITE - BB from 12/30/2020 to 12/31/2020 -->
-                              <div></div>
-                            </div>
-                            <div class="text-right text-uppercase body-1 col">€ {{ prezzi.importo }}</div>
-                          </div>
-                        </div>
-                      </b-collapse>
-                      <div class="des-tile text-left mt-3">
-                        <h2 class="exrea-service">
-                          SERVICE EXTRA
-                          <span>
-                            <i class="fa fa-euro"></i>
-                            50
-                            <sub>,00</sub>
-                          </span>
-                        </h2>
-                      </div>
-                      <div v-b-toggle.collapse-d class="detailsv">
-                        <i class="fa fa-plus"></i> Details
-                      </div>
-                      <b-collapse id="collapse-d" visible class="mt-2">
-                        <div class="destailsdd">
-                          <div class="row border-box">
-                            <div class="text-left body-1 font-weight-light col">
-                              N.7 aria condizionata
-                              <div></div>
-                            </div>
-                            <div class="text-right text-uppercase body-1 col">Incluso</div>
-                          </div>
-
-                          <div class="row border-box">
-                            <div class="text-left body-1 font-weight-light col">
-                              n.7 Posto auto
-                              <div></div>
-                            </div>
-                            <div class="text-right text-uppercase body-1 col">
-                              <div class="des-tile text-right">
-                                <div class="fv">
-                                  <i class="fa fa-euro"></i>
-                                  70
-                                  <sub>,00</sub>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </b-collapse>
-                      <div class="row mt-3">
-                        <div class="text-left headline font-weight-light col font-32">Total price</div>
-                        <div
-                          class="text-right text-uppercase headline font-weight-bold col font-32"
-                        >€ {{ data1.prezzo }}</div>
-                      </div>
-                    </div>
-                  </b-card-text>
+                  <h2>€ 180</h2>
                 </div>
-              </b-card-body>
-            </b-collapse>
-          </b-card>
-        </div>
+
+                <div class="sliderbanner">
+                  <h4>Standard</h4>
+
+                  <div>
+                    <b-carousel
+                      id="carousel-12"
+                      v-model="slide"
+                      :interval="4000"
+                      controls
+                      indicators
+                      background="#ababab"
+                      img-width="1024"
+                      img-height="480"
+                      style="text-shadow: 1px 1px 2px #333;"
+                    >
+                      <!-- Text slides with image -->
+                      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=52"></b-carousel-slide>
+
+                      <!-- Slides with custom text -->
+                      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54"></b-carousel-slide>
+
+                      <!-- Slides with image only -->
+                      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
+
+                      <!-- Slides with img slot -->
+                      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
+                      <b-carousel-slide>
+                        <template #img>
+                          <img
+                            class="d-block img-fluid w-100"
+                            width="1024"
+                            height="480"
+                            src="https://picsum.photos/1024/480/?image=55"
+                            alt="image slot"
+                          />
+                        </template>
+                      </b-carousel-slide>
+
+                      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
+                      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image"></b-carousel-slide>
+                    </b-carousel>
+                  </div>
+
+                  <div class="mt-3 mb-3 destailsdd">
+                    <div class="row">
+                      <div class="text-left body-1 font-weight-bold col">Description</div>
+                      <div class="text-right text-uppercase body-1 font-weight-bold col">Price</div>
+                    </div>
+                    <div class="row">
+                      <div class="text-left body-1 font-weight-light col">
+                        MAT STD - BB from 30/12/2020 to 31/12/2020
+                        <div></div>
+                      </div>
+                      <div class="text-right text-uppercase body-1 col">€ 100.00</div>
+                    </div>
+                    <div class="row">
+                      <div class="text-left body-1 font-weight-light col">
+                        Adult - BB from 12/30/2020 to 12/31/2020
+                        <div></div>
+                      </div>
+                      <div class="text-right text-uppercase body-1 col">€ 40.00</div>
+                    </div>
+                    <div class="row">
+                      <div class="text-left body-1 font-weight-light col">
+                        Adult - BB from 12/30/2020 to 12/31/2020
+                        <div></div>
+                      </div>
+                      <div class="text-right text-uppercase body-1 col">€ 40.00</div>
+                    </div>
+                    <div class="row">
+                      <div class="text-left headline font-weight-light col">Total price</div>
+                      <div class="text-right text-uppercase headline font-weight-bold col">€ 180</div>
+                    </div>
+                  </div>
+                </div>
+              </b-card-text>
+            </b-tab>
+          </b-tabs>
+        </b-card>
       </b-container>
     </div>
 
     <div class="container" v-bind:key="data + Math.random()" v-for="data of todos.soluzioni">
-      <!-- <p style="text-align: right; margin-right: 2%">
+      <p style="text-align: right; margin-right: 2%">
         dal {{ data.dal }} al {{ data.al }} per {{ data.occupancy }}
         {{ data.risorse[0].Trattamento.Descrizione }}
-      </p>-->
+      </p>
 
       <div class="accordion" role="tablist">
         <b-card no-body class="mb-1">
@@ -542,7 +349,7 @@
               <i class="fa fa-angle-down right-icon" aria-hidden="true"></i>
             </b-button>
           </b-card-header>
-          <b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
+          <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
             <b-card-body>
               <p v-html="data.risorse[0].info[0].testo" style="text-align: left"></p>
 
@@ -635,7 +442,7 @@
               ></i>
             </b-button>
           </b-card-header>
-          <b-collapse id="accordion-9" accordion="my-accordion" role="tabpanel">
+          <b-collapse id="accordion-9" visible accordion="my-accordion" role="tabpanel">
             <b-card-body>
               <b-card-text style="text-align: left">
                 <div>
@@ -732,7 +539,7 @@
           </b-collapse>
         </b-card>
         <div class="text-right mt-3">
-          <button class="btn btn-lg btn-warning" @click="$bvModal.show('bv-modal-example')">Confirm</button>
+          <button class="btn btn-lg btn-warning" @click="gotonextpage()" :key="gotonextpage">Confirm</button>
         </div>
       </div>
       <div class="container-fluid cont">
@@ -916,27 +723,17 @@
           <ul class="iconsocial">
             <li>
               <b-link href="#">
-                <img src="../assets/you.png" style="width: 50px" alt="youtube" />
-
-                <!-- <i class="fa fa-youtube"></i> -->
+                <i class="fa fa-facebook"></i>
               </b-link>
             </li>
             <li>
               <b-link href="#">
-                <img src="../assets/whatsapp.png" style="width: 40px" alt="what" />
-
-                <!-- <i class="fa fa-whatsapp"></i> -->
+                <i class="fa fa-twitter"></i>
               </b-link>
             </li>
             <li>
               <b-link href="#">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1000px-Telegram_logo.svg.png"
-                  style="width: 40px"
-                  alt="tele"
-                />
-
-                <!-- <i class="fa fa-telegram"></i> -->
+                <i class="fa fa-instagram"></i>
               </b-link>
             </li>
           </ul>
@@ -989,20 +786,10 @@
         /></a>-->
         <div class="clear">&nbsp;</div>
       </div>
-      <!--<div class="footer-icon">
-        <a href="#">
-          <i class="fa fa-comments-o"></i>
-        </a>
-      </div>-->
     </footer>
-
-    <b-modal id="bv-modal-example" hide-footer hide-header centered>
-      <div class="d-block text-center pt-5 pb-5">
-        <h1>Thank you for booking!</h1>
-      </div>
-    </b-modal>
   </div>
 </template>
+
 
 <!-- v-on:del-todo="deleteTodo" -->
 
@@ -1011,25 +798,18 @@
 import Todos from "../components/Todos";
 import json from "../assets/proposal.json";
 // import AddTodo from "../components/AddTodo";
-import Header from "../components/layout/header";
 import axios from "axios";
 export default {
   name: "Home",
   components: {
-    Todos,
-    Header
+    Todos
   },
   data() {
     return {
       todos: [],
-      proposal: [],
-      myJson: json,
-      key: "1",
-      show: "",
-      showMessage: true,
-      showMessage2: false,
-      selected: true,
-      isclass: ""
+      myJson: json, //make it array
+      show: false,
+      active: false
     };
   },
   methods: {
@@ -1040,19 +820,13 @@ export default {
       console.log("hello");
       this.$router.push({ path: "/thankyou" });
     },
-    activate: function(el) {
-      console.log("el", el);
-      this.active_el = el;
-    },
-    scrollMethod(id) {
-      console.log("scrolls", id, this.show);
-      const el = document.getElementById(`${this.show}`);
+    activeTab(active) {
+      console.log("from active tab", active);
+      // this.$router.push({ path: "/thankyou" });
+      // let show = active;
+      //console.log(show, !this.show);
 
-      el.scrollIntoView({
-        behavior: "smooth"
-        // block: "start"
-        // inline: "start"
-      });
+      return active;
     }
   },
 
@@ -1064,27 +838,8 @@ export default {
       .then(res => ((this.todos = res.data), console.log("hi", res.data)))
       .catch(err => console.log(err));
   },
-  mounted() {
-    axios
-      .get(
-        "https://us-central1-hrcrm-439b3.cloudfunctions.net/webApi/api/v1/preventivi/277B4311-9922-450A-87CC-57A5447D5AB4"
-      )
-      .then(res => ((this.proposal = res.data), console.log("hi", res.data)))
-      .catch(err => console.log(err));
-  }
+  mounted() {}
 };
-
-// var Tawk_API = Tawk_API || {};
-// let Tawk_LoadStart = new Date();
-(function() {
-  var s1 = document.createElement("script"),
-    s0 = document.getElementsByTagName("script")[0];
-  s1.async = true;
-  s1.src = "https://embed.tawk.to/564f634590d1bced690e0633/default";
-  s1.charset = "UTF-8";
-  s1.setAttribute("crossorigin", "*");
-  s0.parentNode.insertBefore(s1, s0);
-})();
 </script>
 
 <style>
@@ -1150,29 +905,6 @@ body {
   font-size: 16px !important;
   line-height: 22px !important;
 }
-.footer-icon {
-  position: fixed;
-  right: 50px;
-  z-index: 1;
-  bottom: 30px;
-}
-
-.footer-icon a {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  font-size: 40px;
-  background: #bdaa94;
-  text-align: center;
-  line-height: 60px;
-  border-radius: 100%;
-  color: #fff;
-}
-
-.footer-icon a:hover {
-  opacity: 0.9;
-  color: #ccc;
-}
 div#accordion-1 .text {
   padding: 15px !important;
 }
@@ -1217,12 +949,8 @@ ul.iconsocial li {
   list-style: none;
   padding: 5px;
 }
-.logo img {
-  width: 150px;
-  border-radius: 5px;
-}
 
-/* ul.iconsocial li a {
+ul.iconsocial li a {
   font-size: 18px;
   display: block;
   width: 40px;
@@ -1232,13 +960,12 @@ ul.iconsocial li {
   line-height: 40px;
   color: #000;
   border: 1px solid #ccc;
-} */
+}
 
 ul.iconsocial li a:hover {
   background: #f5f5f5;
 }
-
-iconsocial .rooms-feats {
+.rooms-feats {
   font-family: "Gill Sans Light", sans-serif !important;
 }
 .contatto {
@@ -1343,18 +1070,6 @@ h1.navbar-brand.mb-0 {
     left: 0px !important;
     right: 0px !important;
     bottom: 0px !important;
-  }
-  .persoal-cc h3 {
-    width: 75% !important;
-    font-size: 18px !important;
-  }
-
-  .persoal-cc h2 {
-    font-size: 14px !important;
-  }
-
-  .tabsbv ul li {
-    font-size: 16px !important;
   }
   h1.navbar-brand.mb-0 {
     margin: auto !important;
@@ -1516,72 +1231,5 @@ h1.navbar-brand.mb-0 {
 .destailsdd .headline {
   font-size: 28px;
   margin-top: 15px;
-}
-.tabsbv ul {
-  margin: 0px;
-  padding: 15px;
-  background: #eeece9;
-}
-
-.tabsbv ul li {
-  list-style: none;
-  width: 50%;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 8px;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.tabsbv ul li.active {
-  background: #bdaa94;
-  color: #fff;
-}
-.des-tile h2 {
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.fv {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2fa34b;
-}
-
-span.suboo {
-  text-decoration: line-through;
-  font-size: 15px;
-}
-.detailsv {
-  outline: none;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
-  font-weight: bold;
-}
-.border-box {
-  border-bottom: 1px solid #ccc;
-}
-h2.exrea-service {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-h2.exrea-service span {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2fa34b;
-}
-.font-32 {
-  font-size: 24px;
-}
-.destailsdd {
-  padding: 0px 18px;
-}
-.border_new {
-  border: 10px solid #bdaa94;
 }
 </style>
