@@ -3,16 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "PORT=7070 vue-cli-service serve",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.21.1",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
+    "vue-sticky-element": "^1.1.2",
     "vue2-gmap-custom-marker": "^6.0.0",
     "x5-gmaps": "^0.3.31"
   },
